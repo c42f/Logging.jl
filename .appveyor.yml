@@ -1,10 +1,14 @@
+# Documentation: https://github.com/JuliaCI/Appveyor.jl
 environment:
   matrix:
-  - JULIAVERSION: "julialang/bin/winnt/x86/0.5/julia-0.5-latest-win32.exe"
-  - JULIAVERSION: "julialang/bin/winnt/x64/0.5/julia-0.5-latest-win64.exe"
-  - JULIAVERSION: "julianightlies/bin/winnt/x86/julia-latest-win32.exe"
-  - JULIAVERSION: "julianightlies/bin/winnt/x64/julia-latest-win64.exe"
-
+  - julia_version: 1.0
+  - julia_version: nightly
+platform:
+  - x86
+  - x64
+#matrix:
+#  allow_failures:
+#    - julia_version: nightly
 branches:
   only:
     - master
